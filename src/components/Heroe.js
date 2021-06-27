@@ -23,4 +23,4 @@ function Heroe({heroes, onClose}) {
     }
 }
 
-export default Heroe
+export default Heroe;
