@@ -19,22 +19,14 @@ function Navbar({onSearch}) {
       setCharacter(data);
     }
 
-    // const handleChange = (e) => {
-    //   setValue(e.target.value);
-    // }
-
-    // const filterHeroes = character.filter(person => {
-    //   return person.name.toLowerCase().includes(value.toLowerCase());
-    // })
-    
+        
     return (
         <>
          <ReactBootstrap.Navbar bg="light" expand="lg">
             <ReactBootstrap.Navbar.Brand href="#home">Alkemy - SuperHero</ReactBootstrap.Navbar.Brand>
-            <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <ReactBootstrap.Navbar.Collapse id="basic-navbar-nav">
+            {/* <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+            <ReactBootstrap.Navbar id="basic-navbar-nav">
           <ReactBootstrap.Nav className="mr-auto">
-          <ReactBootstrap.Button variant="outline-success">Loguin</ReactBootstrap.Button>
           </ReactBootstrap.Nav>
             <ReactBootstrap.Form onSubmit={(e) => {
                   e.preventDefault();
@@ -43,7 +35,8 @@ function Navbar({onSearch}) {
                 <ReactBootstrap.FormControl type="text" value={value} onChange={e => setValue(e.target.value)} placeholder="Busca..." className="mr-sm-2" />
                 <ReactBootstrap.Button type="submit" variant="outline-success">Agregar</ReactBootstrap.Button>
             </ReactBootstrap.Form>
-          </ReactBootstrap.Navbar.Collapse>
+            <ReactBootstrap.Button variant="outline-success">Loguin</ReactBootstrap.Button>
+          </ReactBootstrap.Navbar>
         </ReactBootstrap.Navbar>
         <ul>
 
