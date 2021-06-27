@@ -1,20 +1,19 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 
-function Heroe({heroes, image, name, strength, id, onClose}) {
+import CardHeroe from './CardHeroe';
+
+function Heroe({heroes, onClose}) {
     if(heroes) {
     return (
         <div>
             { heroes.map( h =>
-                <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={image} />
-                <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>{strength}
-                </Card.Text>
-                <Card.Button variant="primary" onClose={() => onClose(id)}>Go somewhere</Card.Button>
-                </Card.Body>
-            </Card>)}
+                <CardHeroe 
+                image={h.image}
+                name={h.name}
+                strength={h.strength}
+                onClose={() => onClose(h.id)}
+                id={h.id}
+            /> )}
         </div>
     );
     } else {

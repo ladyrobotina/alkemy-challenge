@@ -17,25 +17,28 @@ function App() {
     axios.get(`https://superheroapi.com/api.php/531800601584511/search/${heroe}`)
     // .then(r => r.json())
     .then((recurso) => {
-        if(recurso.main !== undefined){
+      console.log(recurso.data.results)
+      const data = recurso.data
           const heroe = {
-            name: recurso.name,
-            image: recurso.image.url,
-            id: recurso.results.id,
-            strength: recurso.results.strength,
+            name: data.results[0].name,
+            image: data.results.image,
+            id: data.results.id,
+            strength: data.results.strength,
             
           };
     setHeroes(oldHeroes => [...oldHeroes, heroe]);
-  } else {
-    alert("SuperHeroe no encontrado");
-  }
+  
   });
 }
-    
+
+  function onClose(id) {
+    setHeroes(oldHeroes => oldHeroes.filter(c => c.id !== id))
+  }
+
   return (
     <div className="App">
       <Navbar onSearch={onSearch} />
-      <Heroe heroes={heroes} /> 
+      <Heroe heroes={heroes} onClose={onClose} /> 
      
     </div>
   );

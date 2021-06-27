@@ -19,13 +19,13 @@ function Navbar({onSearch}) {
       setCharacter(data);
     }
 
-    const handleChange = (e) => {
-      setValue(e.target.value);
-    }
+    // const handleChange = (e) => {
+    //   setValue(e.target.value);
+    // }
 
-    const filterHeroes = character.filter(person => {
-      return person.name.toLowerCase().includes(value.toLowerCase());
-    })
+    // const filterHeroes = character.filter(person => {
+    //   return person.name.toLowerCase().includes(value.toLowerCase());
+    // })
     
     return (
         <>
