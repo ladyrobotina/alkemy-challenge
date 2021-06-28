@@ -35,7 +35,7 @@ function Navbar({onSearch}) {
                 <ReactBootstrap.FormControl type="text" value={value} onChange={e => setValue(e.target.value)} placeholder="Busca..." className="mr-sm-2" />
                 <ReactBootstrap.Button type="submit" variant="outline-success">Agregar</ReactBootstrap.Button>
             </ReactBootstrap.Form>
-            <ReactBootstrap.Button variant="outline-success">Loguin</ReactBootstrap.Button>
+            <ReactBootstrap.Button variant="outline-success">Login</ReactBootstrap.Button>
           </ReactBootstrap.Navbar>
         </ReactBootstrap.Navbar>
         <ul>

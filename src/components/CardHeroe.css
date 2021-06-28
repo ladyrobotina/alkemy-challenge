@@ -1,6 +1,6 @@
 .card {
     margin: 20px;
-    width: 18rem;
+    width: 28rem;
   }
   
   .card-title {
@@ -18,3 +18,8 @@
     margin-top: 0px !important;
     padding-top: 0px !important;
   }
+
+.imageHeroe {
+    display: flex;
+    justify-content: flex-end;
+}

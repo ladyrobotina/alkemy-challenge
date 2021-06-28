@@ -10,7 +10,7 @@ function Heroe({heroes, onClose}) {
                 <CardHeroe 
                 image={h.image}
                 name={h.name}
-                strength={h.strength}
+                powerstats={h.powerstats}
                 onClose={() => onClose(h.id)}
                 id={h.id}
             /> )}

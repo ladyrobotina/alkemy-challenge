@@ -1,7 +1,7 @@
 import React from 'react';
 import './CardHeroe.css';
 
-function CardHeroe ({strength, name, image, onClose, id}) {
+function CardHeroe ({powerstats, name, image, onClose, id}) {
     return (
       <div className="card">
             
@@ -12,8 +12,8 @@ function CardHeroe ({strength, name, image, onClose, id}) {
           <h5 className="card-title">{name}</h5>
           <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>Strength</p>
-              <p>{strength}°</p>
+              <p>powerstats</p>
+              <p>{powerstats}</p>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
               <img className="imageHeroe" src={image} width="100" height="100" alt="" />

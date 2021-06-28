@@ -23,7 +23,7 @@ function App() {
             name: data.results[0].name,
             image: data.results.image,
             id: data.results.id,
-            strength: data.results.strength,
+            powerstats: data.results.powerstats,
             
           };
     setHeroes(oldHeroes => [...oldHeroes, heroe]);
